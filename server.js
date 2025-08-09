@@ -16,7 +16,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server, {
   cors: {
-    origin: [],
+    origin: ["https://streamtalk-frontend.onrender.com"], // Your frontend URL],
     methods: ["GET", "POST"],
     credentials: true,
   },
