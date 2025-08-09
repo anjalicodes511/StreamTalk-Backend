@@ -16,7 +16,11 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server, {
   cors: {
-    origin: ["https://streamtalk-frontend.onrender.com"], // Your frontend URL],
+    // origin: ["https://streamtalk-frontend.onrender.com"], // Your frontend URL],
+    origin: [
+      "http://localhost:5173", // Local development
+      "https://your-netlify-app.netlify.app", // Replace with your actual Netlify domain
+    ],
     methods: ["GET", "POST"],
     credentials: true,
   },
